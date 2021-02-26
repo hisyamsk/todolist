@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <title>To do List</title>
+</head>
+
+<body>
+  <header class="header">
+    <div class="container">
+        <h1>To do List App</h1>
+    </div>
+  </header>
+
+  <main>
+    <div class="container card">
+      <div class="title">
+        <h2>Add new to do list</h2>
+      </div>
+      <form id="addForm">
+        <div class="additems">
+          <input type="text" class="input-text" id="item">
+          <input type="submit" value="Add" class="button">
+        </div>
+      </form>
+      <div class="remove-btn">
+        <button id="clear-all" class="button button-red">Clear All</button>
+      </div>
+      <div class="title-2">
+        <h2>To Do: </h2>
+        <div class="features">
+          <input type="text" id="filter" class="input-text" placeholder="Search item...">
+          <input type="checkbox" id="check" class="checkbox">
+          <label for="checkbox">Hide Completed</label>
+        </div>
+      </div>
+      <ul id="items" class="list-group">
+        <li class="list-group-item">
+          <p>Wash dishes</p>
+          <div class="buttons">
+            <button class="done button">&#10003;</button> 
+            <button class="delete button button-red">X</button>  
+          </div>
+        </li>
+        <li class="list-group-item">
+          <p>Meeting</p>
+          <div class="buttons">
+            <button class="done button">&#10003;</button> 
+            <button class="delete button button-red">X</button>  
+          </div>
+        </li>
+      </ul>
+    </div>
+  </main>
+  <script src="main.js"></script>
+</body>
+
+</html>
