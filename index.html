@@ -23,19 +23,23 @@
       </div>
       <form id="addForm">
         <div class="additems">
-          <input type="text" class="input-text" id="item">
-          <input type="submit" value="Add" class="button">
+          <div class="inputs">
+            <input type="text" class="input-text" id="item">
+            <input type="submit" value="Add" class="button">
+          </div>
+        </div>
+        <div class="remove-btn">
+          <button id="clear-all" class="button button-red">Clear All</button>
         </div>
       </form>
-      <div class="remove-btn">
-        <button id="clear-all" class="button button-red">Clear All</button>
-      </div>
       <div class="title-2">
         <h2>To Do: </h2>
         <div class="features">
           <input type="text" id="filter" class="input-text" placeholder="Search item...">
-          <input type="checkbox" id="check" class="checkbox">
-          <label for="checkbox">Hide Completed</label>
+          <div class="cb">
+            <input type="checkbox" id="check" class="checkbox">
+            <label for="checkbox">Hide Completed</label>
+          </div>
         </div>
       </div>
       <ul id="items" class="list-group">

@@ -51,6 +51,9 @@ function addItem(e) {
 
     // add the list and display them
     itemList.appendChild(li);
+
+    // clear the input text field
+    document.getElementById('item').value = "";
 }
 
 function btnAction(e) {
