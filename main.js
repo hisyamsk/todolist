@@ -20,40 +20,42 @@ function addItem(e) {
 
     // get input value
     let newItem = document.getElementById('item').value;
-    // create new li, p, and button element
-    let li = document.createElement('li');
-    let p = document.createElement('p');
-    let div = document.createElement('div');
-    let button = document.createElement('button');
-    let button_red = document.createElement('button');
+    if (newItem !== "") {
+        // create new li, p, and button element
+        let li = document.createElement('li');
+        let p = document.createElement('p');
+        let div = document.createElement('div');
+        let button = document.createElement('button');
+        let button_red = document.createElement('button');
 
-    // add class
-    li.className = "list-group-item";
-    div.className = "buttons";
-    button.className = "done button";
-    button_red.className = "delete button button-red";
+        // add class
+        li.className = "list-group-item";
+        div.className = "buttons";
+        button.className = "done button";
+        button_red.className = "delete button button-red";
 
-    // add text node to p
-    p.appendChild(document.createTextNode(newItem));
+        // add text node to p
+        p.appendChild(document.createTextNode(newItem));
 
-    // button customization
-    button.appendChild(document.createTextNode("\u2713"));
-    button_red.appendChild(document.createTextNode("X"));
-    button.style.marginRight = "5.63px";
+        // button customization
+        button.appendChild(document.createTextNode("\u2713"));
+        button_red.appendChild(document.createTextNode("X"));
+        button.style.marginRight = "5.63px";
 
-    // append all buttons to div element
-    div.appendChild(button);
-    div.appendChild(button_red);
+        // append all buttons to div element
+        div.appendChild(button);
+        div.appendChild(button_red);
 
-    // append all elements to li
-    li.appendChild(p);
-    li.appendChild(div);
+        // append all elements to li
+        li.appendChild(p);
+        li.appendChild(div);
 
-    // add the list and display them
-    itemList.appendChild(li);
+        // add the list and display them
+        itemList.appendChild(li);
 
-    // clear the input text field
-    document.getElementById('item').value = "";
+        // clear the input text field
+        document.getElementById('item').value = "";
+    }
 }
 
 function btnAction(e) {
@@ -110,7 +112,9 @@ function hideItem(e) {
 }
 
 function clearAll(e) {
-    if (confirm("Are you sure you want to clear all the lists?")) {
-        itemList.innerHTML = "";
+    if (e.target.classList.contains("button-red")) {
+        if (confirm("Are you sure you want to clear all the lists?")) {
+            itemList.innerHTML = "";
+        }
     }
 }
